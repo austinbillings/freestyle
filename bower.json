@@ -7,7 +7,7 @@
   "description": "A style wrangler library, in pure javascript. Convert, serialize, uglify, inject, and scope styles in-browser.",
   "keywords": [
     "css",
-    "style"
+    "style",
     "frontend",
     "utility",
     "tool",
