@@ -38,7 +38,7 @@ Splits a string given as `text` by the character `splitBy`, then trims whitespac
 ```js
 let exampleStr = `LO!, and behold, , space , upon ,   space. ,,,,,,`;
 
-freestyle.explode(exampleStr);
+freestyle.explode(exampleStr, ',');
 // ...
 [
   'LO!',
