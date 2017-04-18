@@ -1,6 +1,6 @@
 {
   "name": "node-freestyle",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A style wrangler library, in pure javascript. Convert, serialize, uglify, inject, and scope styles in-browser.",
   "main": "freestyle.js",
   "scripts": {

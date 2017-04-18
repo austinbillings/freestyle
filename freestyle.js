@@ -8,7 +8,7 @@
 	"use strict";
 
   var freestyle = {
-    version: '0.0.1',
+    version: '0.0.2',
     commentRegex: /(\/\/[^\r\n|^\n]+)|(\/\*[^\*\/]+\*\/)/g
   };
   
