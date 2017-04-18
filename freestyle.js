@@ -8,7 +8,10 @@
 	"use strict";
 
   var freestyle = {
-    version: '0.0.2',
+    version: '0.0.3',
+		generateTagId: function () {
+			return '__freefall-injection-' + Date.now();
+		},
     commentRegex: /(\/\/[^\r\n|^\n]+)|(\/\*[^\*\/]+\*\/)/g
   };
   
@@ -192,11 +195,40 @@
     if (ugly) css = freestyle.uglify(css);
     return css;
   };
+	
+	freestyle.injectCss = function (css, id, appendTo) {
+		id = id || freestyle.generateTagId();
+		appendTo = appendTo || document.getElementsByTagName('head')[0];
+		
+		if (!freestyle.isValidCss(css)) return freestyle.error('invalid');
+		
+		var test = document.getElementById(id);
+		
+		if (!test || test.tagName.toLowerCase() !== 'style') {
+			var element = document.createElement('style');
+			element.setAttribute('type', 'text/css');
+			element.setAttribute('id', id);
+			appendTo.appendChild(element);
+		};
+		
+		var node = document.getElementById(id);
+		node.innerHTML = css;
+		return node;
+	}
+	
+	freestyle.removeInjection = function (id) {
+		var presume = document.getElementById(id);
+		if (presume && presume.tagName.toLowerCase() === 'style') {
+			presume.remove();
+			return true;
+		}
+		return false;
+	}
   
   /* Export -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 	if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
-	  module.exports = freestyle;
+		module.exports = freestyle;
 	} else {
-    window.freestyle = freestyle;
+		window.freestyle = freestyle;
 	}
 })();
