@@ -1,4 +1,4 @@
-![freestyle logo](./logo.svg)
+![freestyle logo](./logo.png)
 
 # freestyle.js
 A style wrangler library, in pure javascript. Convert, serialize, uglify, inject, and scope styles in-browser.
