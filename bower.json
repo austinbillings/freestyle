@@ -1,0 +1,29 @@
+{
+  "name": "freestyle",
+  "main": "freestyle.js",
+  "authors": [
+    "Austin Billings <ab@austinbillings.com>"
+  ],
+  "description": "A style wrangler library, in pure javascript. Convert, serialize, uglify, inject, and scope styles in-browser.",
+  "keywords": [
+    "css",
+    "style"
+    "frontend",
+    "utility",
+    "tool",
+    "parse",
+    "convert"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/austinbillings/freestyle",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "package.json",
+    "README.md",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {}
+}

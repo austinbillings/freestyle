@@ -1,0 +1,33 @@
+{
+  "name": "node-freestyle",
+  "version": "0.0.1",
+  "description": "A style wrangler library, in pure javascript. Convert, serialize, uglify, inject, and scope styles in-browser.",
+  "main": "freestyle.js",
+  "scripts": {
+    "build": "uglifyjs freestyle.js -o freestyle.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/austinbillings/freestyle.git"
+  },
+  "keywords": [
+    "css",
+    "style",
+    "frontend",
+    "utility",
+    "tool",
+    "parse",
+    "convert"
+  ],
+  "author": "Austin Billings <ab@austinbillings.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/austinbillings/freestyle/issues"
+  },
+  "homepage": "https://github.com/austinbillings/freestyle#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "uglifyjs": "^2.4.10",
+    "zaq": "^1.0.3"
+  }
+}
