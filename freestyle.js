@@ -8,7 +8,7 @@
 	"use strict";
 
   var freestyle = {
-    version: '0.0.3',
+    version: '0.0.4',
 		generateTagId: function () {
 			return '__freefall-injection-' + Date.now();
 		},
@@ -57,9 +57,9 @@
   
   freestyle.isValidCss = function (css) {
     var isString = typeof css === 'string' && css.length;
-    var hasBrackets = css.indexOf('{') !== -1 && css.indexOf('}') !== -1;
-    var bracketMatch = (css.match(/{/g) || []).length === (css.match(/}/g) || []).length;
-    var commentMatch = (css.match(/\/\*/g) || []).length === (css.match(/\*\//g) || []).length;
+    var hasBrackets = css && css.indexOf('{') !== -1 && css.indexOf('}') !== -1;
+    var bracketMatch = css && (css.match(/{/g) || []).length === (css.match(/}/g) || []).length;
+    var commentMatch = css && (css.match(/\/\*/g) || []).length === (css.match(/\*\//g) || []).length;
     return (isString && hasBrackets && bracketMatch && commentMatch); 
   };
   
