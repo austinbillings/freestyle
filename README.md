@@ -1,7 +1,4 @@
-![freestyle logo](./logo.png)
-
-# freestyle.js
-A style wrangler library, in pure javascript. Convert, serialize, uglify, inject, and scope styles in-browser.
+![Freestyle.js: A style wrangler library, in pure javascript. Convert, serialize, uglify, inject, and scope styles in-browser.](./logo.png)
 
 ##### Installation
 ```bash
